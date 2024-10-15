@@ -2,8 +2,8 @@ function add(numbers) {
   if (numbers === "") {
     return 0;
   }
-
-  return Number(numbers);
+  const numArray = numbers.split(",");
+  return numArray.reduce((sum, num) => sum + Number(num), 0);
 }
 
 module.exports = { add };
