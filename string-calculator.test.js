@@ -24,4 +24,8 @@ describe("String Calculator", () => {
   test("should handle mixed comma and newline delimiters", () => {
     expect(add("1,2\n3,4")).toBe(10);
   });
+
+  test("should handle custom delimiters", () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
 });
